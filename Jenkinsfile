@@ -11,7 +11,7 @@ pipeline{
                         sh "cat dev/deployment.yaml"
                         sh "git add ."
                         sh "git commit -m 'Done by Jenkins Job update artifact:v${IMAGE_TAG}'"
-                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/SpringPipelineArtifact.git HEAD:main"
+                        sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/SpringPipelineArtifact.git HEAD:master"
                     }
                 }
             }
