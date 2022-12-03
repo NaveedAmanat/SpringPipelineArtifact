@@ -29,7 +29,8 @@ spec:
   selector:
     app: spring 
   ports:
-  - port: 80
+  - name: http
+    port: 80
     protocol: TCP
     targetPort: 8081
 
@@ -45,7 +46,7 @@ spec:
   - host: tomcat.example.com
     http:
       paths:
-      - path: /api
+      - path: /
         pathType: Prefix
         backend:
           service: 
