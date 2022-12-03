@@ -33,3 +33,22 @@ spec:
     protocol: TCP
     targetPort: 8081
 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  namespace: default
+  name: tomcat-example-com
+  labels:
+    app: spring
+spec:
+  rules:
+  - host: tomcat.example.com
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service: 
+            name: spring
+            port:
+              name: http
