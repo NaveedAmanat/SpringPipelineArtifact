@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: spring
-        image: naveed0004/spring:7
+        image: naveed0004/spring:9
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
