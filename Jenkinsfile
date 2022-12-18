@@ -10,7 +10,7 @@ pipeline{
                         sh "sed -i 's+naveed0004/spring.*+naveed0004/spring:${IMAGE_TAG}+g' dev/deployment.yaml"
                         sh "cat dev/deployment.yaml"
                         sh "git add ."
-                        sh "git commit -m 'Done by Jenkins Job update artifact:v${IMAGE_TAG}'"
+                        sh "git commit -m 'Done by Jenkins Job update artifact:${IMAGE_TAG}'"
                         sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/SpringPipelineArtifact.git HEAD:master"
                     }
                 }
